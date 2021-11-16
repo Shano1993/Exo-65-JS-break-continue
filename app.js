@@ -2,9 +2,16 @@
 let elements = document.getElementsByClassName('paragraphe')
 
 for(let i = 0; i < elements.length; i++) {
-    if(i === elements.length -1) {
+
+    if ((i + 1) % 2 === 0) {
+        continue;
+    }
+    else if ( i === elements.length) {
         break;
     }
-    let element = elements[i];
-    element.innerHTML = "Position paragraphe " +i;
+    else {
+        elements[i].innerHTML = i + 1;
+    }
+    console.log(i);
 }
+
